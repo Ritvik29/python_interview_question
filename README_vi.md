@@ -13,7 +13,7 @@
         - [7. Đảo ngược một chuỗi](#7-đảo-ngược-một-chuỗi)
         - [8. Chuyển chuỗi "k:1|k1:2|k2:3|k3:4" thành một dict {k:1, k1:2, ...}](#8-chuyển-chuỗi-k1k12k23k34-thành-một-dict-k1-k12-)
         - [9.请按alist中元素的age由大到小排序](#9请按alist中元素的age由大到小排序)
-        - [10. Kết quả sau là gì?](#10-kết-quả-sau-là-gì?)
+        - [10. Kết quả sau là gì?](#10-kết-quả-sau-là-gì)
         - [11.写一个列表生成式，产生一个公差为11的等差数列](#11写一个列表生成式产生一个公差为11的等差数列)
         - [12.给定两个列表，怎么找出他们相同的元素和不同的元素？](#12给定两个列表怎么找出他们相同的元素和不同的元素)
         - [13.请写出一段python代码实现删除list里面的重复元素？](#13请写出一段python代码实现删除list里面的重复元素)
@@ -396,11 +396,13 @@ def sort_by_age(list1):
 list = ['a','b','c','d','e']
 print(list[10:])
 ```
-代码将输出[],不会产生IndexError错误，就像所期望的那样，尝试用超出成员的个数的index来获取某个列表的成员。例如，尝试获取list[10]和之后的成员，会导致IndexError。然而，尝试获取列表的切片，开始的index超过了成员个数不会产生IndexError，而是仅仅返回一个空列表。这成为特别让人恶心的疑难杂症，因为运行的时候没有错误产生，导致Bug很难被追踪到。
+Kết quả sẽ xuất ra [] và sẽ không tạo ra lỗi IndexError như mong đợi khi cố gắng lấy các thành viên của danh sách có chỉ mục vượt quá số lượng thành viên. Ví dụ: cố gắng lấy danh sách [10] và các thành viên tiếp theo sẽ dẫn đến IndexError. Tuy nhiên, cố gắng để có được một danh sách con của danh sách, chỉ mục ban đầu vượt quá số lượng thành viên không tạo ra IndexError, mà chỉ trả về một danh sách trống. Điều này trở thành một vấn đề đặc biệt kinh tởm và khó hiểu, bởi vì không có lỗi trong hoạt động, điều này gây khó khăn cho việc theo dõi lỗi.
+
 ### 11.写一个列表生成式，产生一个公差为11的等差数列
 ```python
 print([x*11 for x in range(10)])
 ```
+
 ### 12.给定两个列表，怎么找出他们相同的元素和不同的元素？
 ```python
 list1 = [1,2,3]
@@ -410,7 +412,8 @@ set2 = set(list2)
 print(set1 & set2)
 print(set1 ^ set2)
 ```
-### 13.请写出一段python代码实现删除list里面的重复元素？
+
+### 13. Loại bỏ các phần tử trùng lập trong danh sách
 ```python
 l1 = ['b','c','d','c','a','a']
 l2 = list(set(l1))
