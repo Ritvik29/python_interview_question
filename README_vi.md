@@ -17,7 +17,7 @@
         - [11.写一个列表生成式，产生一个公差为11的等差数列](#11写一个列表生成式产生一个公差为11的等差数列)
         - [12.给定两个列表，怎么找出他们相同的元素和不同的元素？](#12给定两个列表怎么找出他们相同的元素和不同的元素)
         - [13.请写出一段python代码实现删除list里面的重复元素？](#13请写出一段python代码实现删除list里面的重复元素)
-        - [14.Cho hai danh sách (list) A，B hãy tìm các phần tử giống và khác nhau](#14-cho-hai-danh-sách-list-a-b-hãy-tìm-các-phần-tử-giống-và-khác-nhau)
+        - [14. Cho hai danh sách (list) A，B hãy tìm các phần tử giống và khác nhau](#14-cho-hai-danh-sách-list-ab-hãy-tìm-các-phần-tử-giống-và-khác-nhau)
     - [企业面试题](#企业面试题)
         - [15.python新式类和经典类的区别？](#15python新式类和经典类的区别)
         - [16.python中内置的数据结构有几种？](#16python中内置的数据结构有几种)
@@ -458,8 +458,9 @@ a. 整型 int、 长整型 long、浮点型 float、 复数 complex
 b. 字符串 str、 列表list、 元祖tuple
 c. 字典 dict 、 集合 set
 
-### 17.python如何实现单例模式?请写出两种实现方式?
-第一种方法:使用装饰器
+### 17. Áp dụng Singleton vào python, hai cách để triển khai
+Cách 1: Sử dụng trang trí (decoration)
+
 ```python
 def singleton(cls):
     instances = {}
@@ -468,14 +469,16 @@ def singleton(cls):
             instances[cls] = cls(*args, **kwargs)
         return instances[cls]
     return wrapper
+
 @singleton
 class Foo(object):
     pass
 foo1 = Foo()
 foo2 = Foo()
-print foo1 is foo2 #True
+print(foo1 is foo2)  # True
 ```
-第二种方法：使用基类
+
+Cách 2：使用基类
 New 是真正创建实例对象的方法，所以重写基类的new 方法，以此保证创建对象的时候只生成一个实例
 ```python
 class Singleton(object):
