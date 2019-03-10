@@ -13,7 +13,7 @@
         - [7. Đảo ngược một chuỗi](#7-đảo-ngược-một-chuỗi)
         - [8. Chuyển chuỗi "k:1|k1:2|k2:3|k3:4" thành một dict {k:1, k1:2, ...}](#8-chuyển-chuỗi-k1k12k23k34-thành-một-dict-k1-k12-)
         - [9.请按alist中元素的age由大到小排序](#9请按alist中元素的age由大到小排序)
-        - [10.下面代码的输出结果将是什么？](#10下面代码的输出结果将是什么)
+        - [10. Kết quả sau là gì?](#10-kết-quả-sau-là-gì?)
         - [11.写一个列表生成式，产生一个公差为11的等差数列](#11写一个列表生成式产生一个公差为11的等差数列)
         - [12.给定两个列表，怎么找出他们相同的元素和不同的元素？](#12给定两个列表怎么找出他们相同的元素和不同的元素)
         - [13.请写出一段python代码实现删除list里面的重复元素？](#13请写出一段python代码实现删除list里面的重复元素)
@@ -391,7 +391,7 @@ alist = [{'name':'a','age':20},{'name':'b','age':30},{'name':'c','age':25}]
 def sort_by_age(list1):
     return sorted(alist,key=lambda x:x['age'],reverse=True)
 ```
-### 10.下面代码的输出结果将是什么？
+### 10. Kết quả sau là gì?
 ```python
 list = ['a','b','c','d','e']
 print(list[10:])
